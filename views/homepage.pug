@@ -1,0 +1,20 @@
+doctype html
+html 
+    head 
+        title= 'Board Games App'
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Board Games 
+        
+        a(href='/update-cobj') Add/Update this table
+        table(style='width:100%',border='1')
+            tr 
+                th Name
+                th BGG Score 
+                th Short Description
+            each game in data
+                tr 
+                    td #{game.properties.name}
+                    td #{game.properties.bgg_score}
+                    td #{game.properties.short_description}

@@ -1,8 +1,24 @@
 doctype html
 html 
     head 
-        title= 'Update Custom Object Form | Integrating With Hubspot I Practicum'
+        title= `#{title}`
         meta(name="viewport" content="width=device-width, initial-scale=1")
         link(rel="stylesheet", href="/css/style.css")
-    body    
-        a(href="/") Return to the homepage
+    body
+        h1 Create New Game
+        .form-wrapper
+            form(method="POST")
+                label(for="name") Name
+                input(name="newName")
+
+                label(for="newShortDescription") Short Description
+                input(name="newShortDescription")
+
+                label(for="newBggScore") BGG Score
+                input(name="newBggScore", type="number", step="0.1", min="0", max="10")
+
+                input(type="submit" value="Submit")
+
+
+
+    a(href="/") Return to the homepage
